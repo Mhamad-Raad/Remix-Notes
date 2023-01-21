@@ -8,6 +8,10 @@ export default function NotesPage() {
   );
 }
 
+export function action() {
+  
+}
+
 export function links() {
   return [...styles()];
 }
