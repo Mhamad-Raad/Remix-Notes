@@ -1,5 +1,4 @@
-import NewNote from '~/components/NewNotes';
-import Styles from '~/components/NewNotes.css';
+import NewNote, { links as styles } from '~/components/NewNotes';
 
 export default function NotesPage() {
   return (
@@ -10,5 +9,5 @@ export default function NotesPage() {
 }
 
 export function links() {
-  return [{ rel: 'stylesheet', href: Styles }];
+  return [...styles()];
 }

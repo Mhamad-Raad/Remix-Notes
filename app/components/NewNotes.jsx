@@ -1,4 +1,5 @@
 import styles from './NewNotes.css';
+
 function NewNote() {
   return (
     <form method='post' id='note-form'>
