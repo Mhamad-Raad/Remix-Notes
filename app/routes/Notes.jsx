@@ -1,9 +1,14 @@
-import React from 'react'
+import NewNote from '~/components/NewNotes';
+import Styles from '~/components/NewNotes.css';
 
 export default function NotesPage() {
   return (
     <main>
-      <h1>Notes</h1>
+      <NewNote />
     </main>
-  )
+  );
+}
+
+export function links() {
+  return [{ rel: 'stylesheet', href: Styles }];
 }
