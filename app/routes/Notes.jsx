@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react';
 import { redirect, useLoaderData } from 'react-router';
 import NewNote, { links as newNoteStyles } from '~/components/NewNotes';
 import NotesList, { links as notesListStyles } from '~/components/NotesList';
@@ -9,6 +10,18 @@ export default function NotesPage() {
     <main>
       <NewNote />
       <NotesList notes={notes} />
+    </main>
+  );
+}
+
+export function ErrorBoundary({ error }) {
+  return (
+    <main className='error'>
+      <h1>Notes Not Working!</h1>
+      <p>error: {error.message}</p>
+      <p>
+        Back to <Link to='/'>safety!</Link>
+      </p>
     </main>
   );
 }
