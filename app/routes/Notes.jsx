@@ -1,5 +1,5 @@
-import { Link } from '@remix-run/react';
-import { redirect, useLoaderData } from 'react-router';
+import { Link, useCatch, useLoaderData } from '@remix-run/react';
+import { json, redirect } from '@remix-run/node';
 import NewNote, { links as newNoteStyles } from '~/components/NewNotes';
 import NotesList, { links as notesListStyles } from '~/components/NotesList';
 import { getStoredNotes, storeNotes } from '~/data/notes';
@@ -28,7 +28,29 @@ export function ErrorBoundary({ error }) {
 
 export async function loader() {
   const notes = await getStoredNotes();
+  if (!notes || notes.length === 0) {
+    throw json(
+      {
+        message: 'No notes found',
+      },
+      {
+        status: 404,
+        statusText: 'Not Found',
+      }
+    );
+  }
   return notes;
+}
+
+export function CatchBoundary() {
+  const response = useCatch();
+  const message = response.data?.message || 'Notes Not Found!';
+  return (
+    <main>
+      <NewNote />
+      <p className='info-message'>error: {message}</p>
+    </main>
+  );
 }
 
 export async function action({ request }) {
