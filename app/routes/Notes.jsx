@@ -1,15 +1,21 @@
-import { redirect } from 'react-router';
+import { redirect, useLoaderData } from 'react-router';
 import NewNote, { links as newNoteStyles } from '~/components/NewNotes';
 import NotesList, { links as notesListStyles } from '~/components/NotesList';
 import { getStoredNotes, storeNotes } from '~/data/notes';
 
 export default function NotesPage() {
+  const notes = useLoaderData();
   return (
     <main>
       <NewNote />
-      <NotesList />
+      <NotesList notes={notes} />
     </main>
   );
+}
+
+export async function loader() {
+  const notes = await getStoredNotes();
+  return notes;
 }
 
 export async function action({ request }) {
