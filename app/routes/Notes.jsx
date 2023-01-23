@@ -21,6 +21,11 @@ export async function loader() {
 export async function action({ request }) {
   const formData = await request.formData();
   const noteData = Object.fromEntries(formData);
+  if (noteData.title.trim() < 3) {
+    return {
+      message: 'The title must be longer than 3 characters',
+    };
+  }
   const existingNotes = await getStoredNotes();
   noteData.id = new Date().toISOString();
   await storeNotes([...existingNotes, noteData]);
