@@ -8,6 +8,10 @@
   margin: 2rem auto;
 }
 
+ul {
+  padding: 0;
+}
+
 #note-list a {
   text-decoration: none;
 }
@@ -53,4 +57,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+}
+
+@media only screen and (max-width: 830px) {
+  .note {
+    width: 265px;
+  }
 }

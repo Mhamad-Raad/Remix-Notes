@@ -56,3 +56,19 @@
   color: var(--color-primary-300);
   cursor: not-allowed;
 }
+
+
+@media only screen and (max-width: 500px) {
+  #note-form {
+    width: 90%;
+    padding: 0.8rem;
+  }
+
+  #note-list {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+}
