@@ -71,3 +71,10 @@ export async function action({ request }) {
 export function links() {
   return [...newNoteStyles(), ...notesListStyles()];
 }
+
+export function meta() {
+  return {
+    title: 'All Notes',
+    description: 'A place to keep your notes',
+  };
+}
