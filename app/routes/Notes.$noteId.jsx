@@ -15,6 +15,13 @@ export default function NoteDetail() {
   );
 }
 
+export async function loader({ params }) {
+  const notes = await getStoredNotes();
+  const noteId = params.noteId;
+  const selectedNote = notes.find((note) => note.id === noteId);
+  return selectedNote;
+}
+
 export function links() {
   return [
     {
