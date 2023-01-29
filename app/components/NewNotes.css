@@ -47,8 +47,9 @@
   font-size: 1.05rem;
 }
 
-.form-actions button:hover {
-  background-color: var(--color-primary-200);
+#note-form .form-actions button:hover {
+  background-color: var(--color-primary-800);
+  color: var(--color-primary-100);
 }
 
 .form-actions button:disabled {
