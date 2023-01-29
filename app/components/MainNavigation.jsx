@@ -8,7 +8,7 @@ function MainNavigation() {
           <NavLink to='/'>Home</NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink to='/notes'>My Notes</NavLink>
+          <NavLink to='/Notes'>My Notes</NavLink>
         </li>
       </ul>
     </nav>
