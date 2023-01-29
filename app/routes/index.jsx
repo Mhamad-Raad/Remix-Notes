@@ -17,3 +17,10 @@ export default function Index() {
 export function links() {
   return [{ rel: 'stylesheet', href: styles }];
 }
+
+export function meta() {
+  return {
+    title: 'Note Take',
+    description: 'Write your notes at ease',
+  };
+}
