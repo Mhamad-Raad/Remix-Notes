@@ -1,16 +1,19 @@
-import { Link } from '@remix-run/react';
+import { Link, useLoaderData } from '@remix-run/react';
+import { getStoredNotes } from '~/data/notes';
 import NoteDetails from '~/styles/note-details.css';
 
 export default function NoteDetail() {
+  const note = useLoaderData();
+
   return (
     <main id='note-details'>
       <header>
         <nav>
           <Link to='/notes'>Back to all Notes</Link>
         </nav>
-        <h1>NOTE TITLE</h1>
+        <h1>{note.title}</h1>
       </header>
-      <p id='note-details-content'>NOTE CONTENT</p>
+      <p id='note-details-content'>{note.content}</p>
     </main>
   );
 }
