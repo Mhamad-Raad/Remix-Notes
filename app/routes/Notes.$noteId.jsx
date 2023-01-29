@@ -42,3 +42,10 @@ export function links() {
     },
   ];
 }
+
+export function meta({data}) {
+  return {
+    title: data.title,
+    description: 'A place to keep your notes',
+  };
+}
