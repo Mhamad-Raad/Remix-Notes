@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react';
 import NoteDetails from '~/styles/note-details.css';
 
 export default function NoteDetail() {
