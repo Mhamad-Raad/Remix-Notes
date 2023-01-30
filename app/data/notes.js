@@ -1,12 +1,17 @@
-import fs from 'fs/promises';
-
 export async function getStoredNotes() {
-  const rawFileContent = await fs.readFile('notes.json', { encoding: 'utf-8' });
-  const data = JSON.parse(rawFileContent);
-  const storedNotes = data.notes ?? [];
-  return storedNotes;
+  const res = await fetch(
+    'https://note-collection-71ac2-default-rtdb.firebaseio.com/notes.json'
+  );
+  const data = await res.json();
+  return data;
 }
 
-export function storeNotes(notes) {
-  return fs.writeFile('notes.json', JSON.stringify({ notes: notes || [] }));
+export async function storeNotes(note) {
+  await fetch(
+    'https://note-collection-71ac2-default-rtdb.firebaseio.com/notes.json',
+    {
+      method: 'POST',
+      body: JSON.stringify(note),
+    }
+  );
 }

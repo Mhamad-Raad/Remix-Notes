@@ -5,7 +5,14 @@ import NotesList, { links as notesListStyles } from '~/components/NotesList';
 import { getStoredNotes, storeNotes } from '~/data/notes';
 
 export default function NotesPage() {
-  const notes = useLoaderData();
+  const data = useLoaderData();
+  let notes = []
+
+  Object.keys(data)?.forEach(function (key) {
+    notes.push(data[key])
+  });
+
+
   return (
     <main>
       <NewNote />
@@ -61,9 +68,10 @@ export async function action({ request }) {
       message: 'The title must be longer than 3 characters',
     };
   }
-  const existingNotes = await getStoredNotes();
+
   noteData.id = new Date().toISOString();
-  await storeNotes([...existingNotes, noteData]);
+  console.log('noteData', noteData);
+  await storeNotes(noteData);
 
   return redirect('/Notes');
 }
