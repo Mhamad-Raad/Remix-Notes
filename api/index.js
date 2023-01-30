@@ -496,7 +496,7 @@ function links2() {
 function meta2({ data }) {
   return {
     title: data.title,
-    description: "A place to keep your notes"
+    description: "A place to expand your horizon"
   };
 }
 
@@ -516,12 +516,12 @@ var home_default = "/build/_assets/home-RT3INEAE.css";
 var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime");
 function Index() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("main", { id: "content", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h1", { children: "A better way of keeping track of your notes" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h1", { children: "A better way of to get advices, see peoples notes on life" }, void 0, !1, {
       fileName: "app/routes/index.jsx",
       lineNumber: 8,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: "Try our early beta and never loose track of your notes again!" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: "Try our early beta and share an advice, or share a note!" }, void 0, !1, {
       fileName: "app/routes/index.jsx",
       lineNumber: 9,
       columnNumber: 7
@@ -720,17 +720,17 @@ function NotesPage() {
   }), /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("main", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(NewNotes_default2, {}, void 0, !1, {
       fileName: "app/routes/Notes.jsx",
-      lineNumber: 18,
+      lineNumber: 17,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(NotesList_default2, { notes }, void 0, !1, {
       fileName: "app/routes/Notes.jsx",
-      lineNumber: 19,
+      lineNumber: 18,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/Notes.jsx",
-    lineNumber: 17,
+    lineNumber: 16,
     columnNumber: 5
   }, this);
 }
@@ -738,7 +738,7 @@ function ErrorBoundary2({ error }) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("main", { className: "error", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("h1", { children: "Notes Not Working!" }, void 0, !1, {
       fileName: "app/routes/Notes.jsx",
-      lineNumber: 27,
+      lineNumber: 26,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("p", { children: [
@@ -746,24 +746,24 @@ function ErrorBoundary2({ error }) {
       error.message
     ] }, void 0, !0, {
       fileName: "app/routes/Notes.jsx",
-      lineNumber: 28,
+      lineNumber: 27,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("p", { children: [
       "Back to ",
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(import_react8.Link, { to: "/", children: "safety!" }, void 0, !1, {
         fileName: "app/routes/Notes.jsx",
-        lineNumber: 30,
+        lineNumber: 29,
         columnNumber: 17
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/Notes.jsx",
-      lineNumber: 29,
+      lineNumber: 28,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/Notes.jsx",
-    lineNumber: 26,
+    lineNumber: 25,
     columnNumber: 5
   }, this);
 }
@@ -787,7 +787,7 @@ function CatchBoundary2() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("main", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(NewNotes_default2, {}, void 0, !1, {
       fileName: "app/routes/Notes.jsx",
-      lineNumber: 57,
+      lineNumber: 56,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("p", { className: "info-message", children: [
@@ -795,12 +795,12 @@ function CatchBoundary2() {
       message
     ] }, void 0, !0, {
       fileName: "app/routes/Notes.jsx",
-      lineNumber: 58,
+      lineNumber: 57,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/Notes.jsx",
-    lineNumber: 56,
+    lineNumber: 55,
     columnNumber: 5
   }, this);
 }
@@ -816,12 +816,12 @@ function links6() {
 function meta4() {
   return {
     title: "All Notes",
-    description: "A place to keep your notes"
+    description: "A place to give a life lesson"
   };
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "da4968cb", entry: { module: "/build/entry.client-F5ONEG4E.js", imports: ["/build/_shared/chunk-XZESR4NR.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4IPZOQ2J.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/Notes": { id: "routes/Notes", parentId: "root", path: "Notes", index: void 0, caseSensitive: void 0, module: "/build/routes/Notes-RXSMF23R.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/Notes.$noteId": { id: "routes/Notes.$noteId", parentId: "root", path: "Notes/:noteId", index: void 0, caseSensitive: void 0, module: "/build/routes/Notes.$noteId-XMDFUYVI.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-E2SMLITW.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-DA4968CB.js" };
+var assets_manifest_default = { version: "17669ae6", entry: { module: "/build/entry.client-F5ONEG4E.js", imports: ["/build/_shared/chunk-XZESR4NR.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4IPZOQ2J.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/Notes": { id: "routes/Notes", parentId: "root", path: "Notes", index: void 0, caseSensitive: void 0, module: "/build/routes/Notes-HV2F5FLG.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/Notes.$noteId": { id: "routes/Notes.$noteId", parentId: "root", path: "Notes/:noteId", index: void 0, caseSensitive: void 0, module: "/build/routes/Notes.$noteId-DZZHUBUC.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-2WJWWZZX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-17669AE6.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public\\build", future = { v2_meta: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

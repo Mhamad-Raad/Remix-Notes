@@ -6,12 +6,11 @@ import { getStoredNotes, storeNotes } from '~/data/notes';
 
 export default function NotesPage() {
   const data = useLoaderData();
-  let notes = []
+  let notes = [];
 
   Object.keys(data)?.forEach(function (key) {
-    notes.push(data[key])
+    notes.push(data[key]);
   });
-
 
   return (
     <main>
@@ -82,6 +81,6 @@ export function links() {
 export function meta() {
   return {
     title: 'All Notes',
-    description: 'A place to keep your notes',
+    description: 'A place to give a life lesson',
   };
 }
