@@ -2,7 +2,7 @@ import { Link } from '@remix-run/react';
 import styles from './NotesList.css';
 
 function NoteList({ notes }) {
-  console.log('notes', notes);
+  ('notes', notes);
   return (
     <ul id='note-list'>
       {notes.map((note, index) => (

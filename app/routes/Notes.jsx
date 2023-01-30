@@ -70,7 +70,6 @@ export async function action({ request }) {
   }
 
   noteData.id = new Date().toISOString();
-  console.log('noteData', noteData);
   await storeNotes(noteData);
 
   return redirect('/Notes');

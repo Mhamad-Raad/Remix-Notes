@@ -472,7 +472,12 @@ function NoteDetail() {
   }, this);
 }
 async function loader({ params }) {
-  let notes = await getStoredNotes(), noteId = params.noteId, selectedNote = notes.find((note) => note.id === noteId);
+  var _a;
+  let data = await getStoredNotes(), noteId = params.noteId, notes = [];
+  (_a = Object.keys(data)) == null || _a.forEach(function(key) {
+    notes.push(data[key]);
+  });
+  let selectedNote = notes.find((note) => note.id === noteId);
   if (!selectedNote)
     throw (0, import_node2.json)(
       { message: `Note with id ${noteId} not found` },
@@ -636,7 +641,7 @@ var NotesList_default = "/build/_assets/NotesList-UI7PP37L.css";
 // app/components/NotesList.jsx
 var import_jsx_dev_runtime7 = require("react/jsx-dev-runtime");
 function NoteList({ notes }) {
-  return console.log("notes", notes), /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("ul", { id: "note-list", children: notes.map((note, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("li", { className: "note", children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react7.Link, { to: note.id, children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("article", { children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("ul", { id: "note-list", children: notes.map((note, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("li", { className: "note", children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react7.Link, { to: note.id, children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("article", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("header", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("ul", { className: "note-meta", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("li", { children: [
@@ -803,7 +808,7 @@ async function action({ request }) {
   let formData = await request.formData(), noteData = Object.fromEntries(formData);
   return noteData.title.trim() < 3 ? {
     message: "The title must be longer than 3 characters"
-  } : (noteData.id = new Date().toISOString(), console.log("noteData", noteData), await storeNotes(noteData), (0, import_node3.redirect)("/Notes"));
+  } : (noteData.id = new Date().toISOString(), await storeNotes(noteData), (0, import_node3.redirect)("/Notes"));
 }
 function links6() {
   return [...links4(), ...links5()];
@@ -816,7 +821,7 @@ function meta4() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "dcf32508", entry: { module: "/build/entry.client-F5ONEG4E.js", imports: ["/build/_shared/chunk-XZESR4NR.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4IPZOQ2J.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/Notes": { id: "routes/Notes", parentId: "root", path: "Notes", index: void 0, caseSensitive: void 0, module: "/build/routes/Notes-BWI6GLE4.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/Notes.$noteId": { id: "routes/Notes.$noteId", parentId: "root", path: "Notes/:noteId", index: void 0, caseSensitive: void 0, module: "/build/routes/Notes.$noteId-OUJCANP7.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-E2SMLITW.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-DCF32508.js" };
+var assets_manifest_default = { version: "da4968cb", entry: { module: "/build/entry.client-F5ONEG4E.js", imports: ["/build/_shared/chunk-XZESR4NR.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4IPZOQ2J.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/Notes": { id: "routes/Notes", parentId: "root", path: "Notes", index: void 0, caseSensitive: void 0, module: "/build/routes/Notes-RXSMF23R.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/Notes.$noteId": { id: "routes/Notes.$noteId", parentId: "root", path: "Notes/:noteId", index: void 0, caseSensitive: void 0, module: "/build/routes/Notes.$noteId-XMDFUYVI.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-E2SMLITW.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-DA4968CB.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public\\build", future = { v2_meta: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

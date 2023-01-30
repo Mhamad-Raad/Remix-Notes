@@ -20,8 +20,13 @@ export default function NoteDetail() {
 }
 
 export async function loader({ params }) {
-  const notes = await getStoredNotes();
+  const data = await getStoredNotes();
   const noteId = params.noteId;
+  let notes = [];
+
+  Object.keys(data)?.forEach(function (key) {
+    notes.push(data[key]);
+  });
   const selectedNote = notes.find((note) => note.id === noteId);
 
   if (!selectedNote) {
