@@ -29,6 +29,7 @@
   border: none;
   border-radius: 2px;
   color: var(--color-primary-800);
+  resize: none;
 }
 
 .form-actions {
